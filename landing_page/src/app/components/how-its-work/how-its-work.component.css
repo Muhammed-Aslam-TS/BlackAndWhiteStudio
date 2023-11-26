@@ -1,0 +1,25 @@
+.icon-container {
+    display: flex;
+    justify-content: center;
+    position: relative;
+}
+
+.icon {
+    position: relative;
+    margin: 0 35px;
+}
+
+.icon::before {
+    content: "";
+    display: block;
+    position: absolute;
+    top: 50%;
+    left: -60px;
+    height: 2px;
+    width: 50px;
+    border-bottom: 2px dotted black;
+}
+
+.icon:first-child::before {
+    display: none;
+}

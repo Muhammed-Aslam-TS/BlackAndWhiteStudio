@@ -1,0 +1,46 @@
+<nav class="fixed top-0 bg-black z-50 w-full flex flex-wrap items-center justify-between py-5"
+  [ngClass]="{'lg:bg-black lg:top-0 transition-all duration-500 ease-in': color, 'lg:bg-transparent lg:top-0 transition-all duration-500 ease-out': !color}">
+  <div class="max-w-screen-xl container md:px-4 px-10 mx-auto flex flex-wrap items-center justify-between">
+    <div class="w-full relative flex justify-between lg:w-auto lg:static lg:block lg:justify-start">
+      <a class="text-slg font-bold leading-relaxed inline-block mr-4 whitespace-nowrap text-white" href="#home">
+        <img class="w-48" src="../../../../assets//image/blackandwhietLogo/black.png" alt="" srcset="">
+        <!-- Black <span class="font-medium">& White Studio</span> -->
+      </a>
+      <button
+        class="text-black cursor-pointer text-xl leading-none px-3 py-1 border border-solid border-transparent rounded bg-transparent block lg:hidden outline-none focus:outline-none"
+        type="button" (click)="navbarOpen = !navbarOpen">
+        <span class="text-white font-bold" *ngIf="navbarOpen"><i class="fa-solid fa-xmark"></i></span>
+        <span class="text-white" *ngIf="!navbarOpen"><i class="fa-solid fa-bars"></i></span>
+      </button>
+    </div>
+    <div class="lg:flex flex-grow items-center" [ngClass]="navbarOpen ? 'flex' : 'hidden'" id="example-navbar-danger">
+      <ul class="flex flex-col lg:flex-row list-none py-2 lg:py-0 space-y-3 lg:space-y-0 lg:ml-auto">
+        <li class="nav-item">
+          <a class="px-7 flex items-center text-xs uppercase font-medium leading-snug text-white" href="#home"
+            (click)="handleOptionClick('home')" [ngClass]="{'text-yellow-600 ': selectedOption === 'home'}">HOME</a>
+        </li>
+        <li class="nav-item">
+          <a class="px-7 flex items-center text-xs uppercase font-medium leading-snug text-white" href="#abouts"
+            (click)="handleOptionClick('about')" [ngClass]="{'text-yellow-600 ': selectedOption === 'about'}">ABOUT</a>
+        </li>
+        <!-- <li class="nav-item">
+          <a class="px-7 flex items-center text-xs uppercase font-medium leading-snug text-white" href="#pablo"
+            (click)="handleOptionClick('gallery')" [ngClass]="{'text-yellow-600 ': selectedOption === 'gallery'}">GALLERY</a>
+        </li> -->
+        <li class="nav-item">
+          <a class="px-7 flex items-center text-xs uppercase font-medium leading-snug  text-white" href="#service"
+            (click)="handleOptionClick('service')" [ngClass]="{'text-yellow-600 ': selectedOption === 'service'}">SERVICE</a>
+        </li>
+        <li class="nav-item">
+          <a class="no-underline px-7 flex items-center text-xs uppercase font-medium leading-snug text-white" href="#projects"
+            (click)="handleOptionClick('projects')"
+            [ngClass]="{'text-yellow-600 ': selectedOption === 'projects'}">PROJECTS</a>
+        </li>
+        <li class="nav-item">
+          <a class="ps-7 flex items-center text-xs uppercase font-medium leading-snug text-white" href="#contacts"
+            (click)="handleOptionClick('contact')" [ngClass]="{'text-yellow-600 ': selectedOption === 'contact'}">CONTACT</a>
+        </li>
+      </ul>
+    </div>
+  </div>
+</nav>

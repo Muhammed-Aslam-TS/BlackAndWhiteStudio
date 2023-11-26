@@ -1,0 +1,60 @@
+<body class="flex items-center justify-center py-8 px-2">
+  <div class="w-full sm:px-6">
+    <div class="px-4 md:px-10 py-4 md:py-7 bg-gray-100 rounded-tl-lg rounded-tr-lg">
+      <div class="sm:flex items-center justify-between">
+        <p class="text-base sm:text-lg md:text-xl lg:text-2xl font-bold leading-normal text-gray-800">Add Banner Images
+        </p>
+        <div>
+
+          <form action [formGroup]="uploadForm" (ngSubmit)="submit()">
+            <div>
+              <input class="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg  block w-full p-2 mb-5"
+                type="text" formControlName="name" name="name" placeholder="Enter a Name">
+              <input type="file" enctype="multipart/form-data"
+                accept="file_type | audio/* | video/* | image/* | media_type" formControlName="file" name="file"
+                (change)="onFileSelected($event)"
+                class=" dark:placeholder:text-white w-2/2 py-2 border border-gray-300 rounded-lg px-4"
+                placeholder="5 Month" />
+              <div class="flex justify-end pt-5">
+                <button
+                  class="ms-5 py-3 bg-black text-white shadow-xl rounded-xl items-center px-3 font-bold uppercase hover:bg-gray-600">
+                  Submit
+                </button>
+              </div>
+            </div>
+          </form>
+        </div>
+      </div>
+    </div>
+    <div class="bg-white shadow px-4 md:px-10 pt-4 md:pt-7 pb-5 overflow-y-auto">
+      <table class="w-full whitespace-nowrap">
+        <thead>
+          <tr class="h-16 w-full text-sm leading-none text-gray-800">
+            <th class="font-normal text-left pl-4">Images</th>
+            <th class="font-normal text-left pl-12">Tasks</th>
+          </tr>
+        </thead>
+        <tbody class="w-full">
+          <tr *ngFor="let item of this.allImages"
+            class="h-20 text-sm leading-none text-gray-800 bg-white hover:bg-gray-100 border-b border-t border-gray-100">
+            <td class="pl-4 cursor-pointer">
+              <div class="flex items-center">
+                <div class="w-10 h-10">
+                  <img class="w-full h-full" src="{{item.img}}" />
+                </div>
+                <div class="pl-4">
+                  <p class="font-medium">{{item.name}}</p>
+                  <p class="text-xs leading-3 text-gray-600 pt-2">Herman Group</p>
+                </div>
+              </div>
+            </td>
+            <td class="px-7 2xl:px-0">
+              <button (click)="delete(item._id)"
+                class="focus:outline-none h-8 rounded-lg text-white bg-red-500 w-24">Delete</button>
+            </td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+  </div>
+</body>
