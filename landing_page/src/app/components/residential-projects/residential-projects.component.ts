@@ -16,10 +16,12 @@ export class ResidentialProjectsComponent {
 
   ngOnInit() {
     this.service.getResidential().subscribe((response: any) => {
-      // response = response
-      
-      // this.villasFilterData = response
-      this.filteredResidentialImages = response.filter((item:any) => item.category === "residential");
+      response.map((item:any) =>  {
+        item.category = item.category.toLowerCase()
+        if (item.category === "residential"){
+          this.filteredResidentialImages.push(item)
+        }
+      });
     });    
 
   }

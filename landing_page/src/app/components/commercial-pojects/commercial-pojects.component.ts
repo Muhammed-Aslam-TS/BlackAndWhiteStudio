@@ -9,20 +9,28 @@ import { Router } from '@angular/router';
 })
 export class CommercialPojectsComponent {
 
-  commertialInage: any[] = []
+  // commertialInage: any[] = []
   filteredCommertialImages: any[] = []
-
+  
   constructor(private service: UserServiceService, private router: Router) { }
-
+  
   ngOnInit() {
     this.service.getResidential().subscribe((response: any) => {
-      response = response
-
-      this.commertialInage = response
-      this.filteredCommertialImages = this.commertialInage.filter((item) => item.category === "commertial");
+      console.log('response: ',response);
+      
+      // this.commertialInage = response
+      response.map((item:any) =>  {
+        if (item.category === "commercial"){
+          item.category = item.category.toLowerCase()
+          this.filteredCommertialImages.push(item)
+        }
+      });
     });
-
+    console.log('filteredCommertialImages: ', this.filteredCommertialImages);
+    
   }
+
+  
 
   gotoGallery(id: string) {
     localStorage.setItem('imageId', id)
@@ -31,5 +39,5 @@ export class CommercialPojectsComponent {
 
 
   p: number = 1;
-  collection: any[] = this.commertialInage;
+  collection: any[] = this.filteredCommertialImages;
 }

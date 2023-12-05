@@ -14,8 +14,8 @@ const httpOptions = {
   providedIn: 'root'
 })
 export class AdminService {
-  // private ApiUrl = 'http://localhost:3000'
-  private ApiUrl = 'https://blackandwhitestudio.in'
+  private ApiUrl = 'http://localhost:3000'
+  // private ApiUrl = 'https://blackandwhitestudio.in'
   constructor(private http: HttpClient, private router: Router) { }
 
   heroImageUpdate(formData: any): Observable<any> {

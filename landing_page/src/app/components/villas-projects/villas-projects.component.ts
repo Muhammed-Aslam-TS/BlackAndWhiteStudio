@@ -1,6 +1,7 @@
 import { Component } from '@angular/core';
 import { UserServiceService } from '../service/user-service.service';
 import { Router } from '@angular/router';
+import { LowerCasePipe } from '@angular/common';
 
 @Component({
   selector: 'app-villas-projects',
@@ -9,18 +10,24 @@ import { Router } from '@angular/router';
 })
 export class VillasProjectsComponent {
 
-  filteredVillasImages:any[] = []
+  filteredVillasImages: any[] = []
 
-  constructor(private service: UserServiceService, private router:Router) { }
+  constructor(private service: UserServiceService, private router: Router) { }
 
   ngOnInit() {
     this.service.getResidential().subscribe((response: any) => {
-      this.filteredVillasImages = response.filter((item: { category: string; }) => item.category === "villas");
+
+      response.map((item: any) => {
+        item.category = item.category.toLowerCase()
+        if (item.category === "renovation") {
+          this.filteredVillasImages.push(item)
+        }
+      });
     });
   }
 
-  gotoGallery(id:string) {
-    localStorage.setItem('imageId',id)
+  gotoGallery(id: string) {
+    localStorage.setItem('imageId', id)
     this.router.navigate(['villaslGallery'])
   }
 

@@ -21,7 +21,7 @@ export class HeroSectionComponent implements OnInit {
   ngOnInit() {
     this.service.getHeroImage().subscribe((response: any) => {
       this.allImages = response
-      console.log(this.allImages, 'all images__________________');
+      // console.log(this.allImages, 'all images__________________');
 
     });
   }

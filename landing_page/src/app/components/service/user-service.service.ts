@@ -16,8 +16,8 @@ const httpOptions = {
 })
 export class UserServiceService {
 
-  // private ApiUrl = 'http://localhost:3000'
-  private ApiUrl = 'https://blackandwhitestudio.in'
+  private ApiUrl = 'http://localhost:3000'
+  // private ApiUrl = 'https://blackandwhitestudio.in'
 
   constructor(private http: HttpClient, private router: Router) { }
 
