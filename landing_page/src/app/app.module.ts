@@ -36,6 +36,7 @@ import { FontAwesomeModule } from '@fortawesome/angular-fontawesome';
 import { VillasProjectsComponent } from './components/villas-projects/villas-projects.component';
 import { App404Component } from './components/app404/app404.component';
 import { PartnersSectionComponent } from './components/partners-section/partners-section.component';
+import { Footer2Component } from './components/footer2/footer2.component';
 
 
 
@@ -69,6 +70,7 @@ import { PartnersSectionComponent } from './components/partners-section/partners
     VillasProjectsComponent,
     App404Component,
     PartnersSectionComponent,
+    Footer2Component,
   ],
   imports: [
     BrowserModule,

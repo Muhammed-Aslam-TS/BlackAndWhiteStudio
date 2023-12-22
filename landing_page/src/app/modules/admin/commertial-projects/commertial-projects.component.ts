@@ -63,10 +63,13 @@ export class CommertialProjectsComponent implements OnInit {
         formData.append('file', image);
       }
     }
-    console.log(residentiialImages,'hero images');
 
     this.service.RsidentialImagesUpdate(formData).subscribe((response: any) => {
-      console.log('Residential image Response:', response);
+      console.log('Residential image Response_____________:', response);
+      if (response.message) {
+        alert(response.message)
+      }
+      location.reload()
     });
   }
 
