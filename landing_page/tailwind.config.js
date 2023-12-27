@@ -18,6 +18,7 @@ module.exports = {
         Roboto: ['Roboto', 'sans-serif'],
         OpenSans: ['Open Sans', 'sans-serif'],
         Ubuntu: ['Ubuntu', 'sans-serif'],
+        
       },
 
     },

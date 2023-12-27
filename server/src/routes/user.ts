@@ -9,7 +9,7 @@ const router = express.Router();
 
 router.post('/addImages', upload.single('file'), userController.heroImage);
 router.get('/getImages',  userController.getHeroImage);
-router.post('/addResidentialImages', upload.array('file',10), ResidentialController.AddProjects);
+router.post('/addResidentialImages', upload.array('file',100), ResidentialController.AddProjects);
 router.get('/getResidentialImages',  ResidentialController.getProjectsImages);
 router.get('/getResidentialGalleryImages',  ResidentialController.getResidentialGalleryImages);
 router.delete('/DeleteBannerImage',  userController.deleteBannerImage);

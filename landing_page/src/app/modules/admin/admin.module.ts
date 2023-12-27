@@ -13,6 +13,9 @@ import { CommertialProjectsComponent } from './commertial-projects/commertial-pr
 import { TableComponent } from './reusableComponent/table/table.component';
 import { FormComponent } from './reusableComponent/form/form.component';
 import { ResidentialProjectsComponent } from './residential-projects/residential-projects.component';
+import { AdminAuthComponent } from 'src/app/shared/component/admin-auth/admin-auth.component';
+import { AdminNavBarComponent } from 'src/app/shared/admin-nav-bar/admin-nav-bar.component';
+
 
 
 @NgModule({
@@ -25,6 +28,9 @@ import { ResidentialProjectsComponent } from './residential-projects/residential
     TableComponent,
     FormComponent,
     ResidentialProjectsComponent,
+    AdminAuthComponent,
+    AdminNavBarComponent,
+
 
   ],
   schemas: [CUSTOM_ELEMENTS_SCHEMA],

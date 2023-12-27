@@ -32,12 +32,12 @@
             (click)="handleOptionClick('service')" [ngClass]="{'text-yellow-600 ': selectedOption === 'service'}">SERVICE</a>
         </li>
         <li class="nav-item">
-          <a class="no-underline px-7 flex items-center text-xs uppercase font-medium leading-snug text-white" href="#projects"
+          <a routerLink="/allProjects" class="no-underline px-7 flex items-center text-xs uppercase font-medium leading-snug text-white" 
             (click)="handleOptionClick('projects')"
             [ngClass]="{'text-yellow-600 ': selectedOption === 'projects'}">PROJECTS</a>
         </li>
         <li class="nav-item">
-          <a class="ps-7 flex items-center text-xs uppercase font-medium leading-snug text-white" href="#contacts"
+          <a class="ps-7 flex items-center text-xs uppercase font-medium leading-snug text-white" routerLink="/getInnTouch"
             (click)="handleOptionClick('contact')" [ngClass]="{'text-yellow-600 ': selectedOption === 'contact'}">CONTACT</a>
         </li>
       </ul>

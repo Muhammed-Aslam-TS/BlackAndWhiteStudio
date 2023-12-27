@@ -17,7 +17,7 @@ export class NavBarComponent {
 
   @HostListener('window:scroll', ['$event'])
   changeColor(event: Event): void {
-    if (window.scrollY >= 10) {
+    if (window.scrollY > 50) {
       this.color = true;
     } else {
       this.color = false;

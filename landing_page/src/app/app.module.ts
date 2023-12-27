@@ -37,6 +37,14 @@ import { VillasProjectsComponent } from './components/villas-projects/villas-pro
 import { App404Component } from './components/app404/app404.component';
 import { PartnersSectionComponent } from './components/partners-section/partners-section.component';
 import { Footer2Component } from './components/footer2/footer2.component';
+import { ContactFormComponent } from './components/contact-form/contact-form.component';
+import { AllProjectsComponent } from './components/all-projects/all-projects.component';
+import { CommercialComponent } from './components/all-projects/commercial/commercial.component';
+import { ResidentialComponent } from './components/all-projects/residential/residential.component';
+import { RennovationComponent } from './components/all-projects/rennovation/rennovation.component';
+import { PopupButtonForContactFormComponent } from './shared/component/popup-button-for-contact-form/popup-button-for-contact-form.component';
+import { TopScrollButtonComponent } from './shared/component/top-scroll-button/top-scroll-button.component';
+import { GetInnTouchComponent } from './components/get-inn-touch/get-inn-touch.component';
 
 
 
@@ -71,6 +79,14 @@ import { Footer2Component } from './components/footer2/footer2.component';
     App404Component,
     PartnersSectionComponent,
     Footer2Component,
+    ContactFormComponent,
+    AllProjectsComponent,
+    CommercialComponent,
+    ResidentialComponent,
+    RennovationComponent,
+    PopupButtonForContactFormComponent,
+    TopScrollButtonComponent,
+    GetInnTouchComponent,
   ],
   imports: [
     BrowserModule,
