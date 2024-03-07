@@ -1,8 +1,11 @@
-<button *ngIf="isbuttonScrolled"
+<div class="rounded-full w-24 h-32">
+    <button *ngIf="isbuttonScrolled"
     class="bg-yellow-500 text-white active:bg-yellow-500 font-bold uppercase text-sm px-6 py-3 rounded-full shadow hover:shadow-lg outline-none focus:outline-none mr-1 mb-1 ease-linear transition-all duration-150"
     type="button" (click)="toggleModal()">
-    Contact our team
+    <!-- Contact our team -->
+    <img class="w-16" src="../../../../assets/image/contactButton.png" alt="" srcset="">
 </button>
+</div>
 <div *ngIf="showModal" class="fixed inset-0 flex justify-center items-center z-50 bg-black bg-opacity-50 backdrop-filter backdrop-blur-md">
     <div class="relative w-auto my-6 mx-96 max-w-3xl rounded-lg p-8">
         <!--content-->
