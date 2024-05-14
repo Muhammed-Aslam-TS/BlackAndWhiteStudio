@@ -1,8 +1,8 @@
-<div class="bg-black w-full h-24">
-    <div class="flex justify-center items-center pt-24">
-        <div class="fixed z-10">
+<div class="w-full h-24">
+    <div class="pt-16 w-full">
+        <div class="fixed z-10 bg-black w-full flex justify-center items-center ">
             <button *ngFor="let tab of tabs" (click)="activeTab = tab" [ngClass]="{
-                'text-blue-500 ': activeTab === tab,
+                'text-yellow-600 ': activeTab === tab,
                 'text-gray-200 ': activeTab !== tab
               }" class="px-4 py-2 rounded-l focus:outline-none">
                 {{ tab | uppercase }}
@@ -17,11 +17,12 @@
 <div class="p-4">
     <ng-container *ngIf="activeTab === 'residential'">
         <!-- Content for Tab 1 -->
-        <app-commercial></app-commercial>
+        <app-residential></app-residential>
+
     </ng-container>
     <ng-container *ngIf="activeTab === 'commercial'">
         <!-- Content for Tab 2 -->
-        <app-residential></app-residential>
+        <app-commercial></app-commercial>
     </ng-container>
     <ng-container *ngIf="activeTab === 'rennovation'">
         <!-- Content for Tab 2 -->

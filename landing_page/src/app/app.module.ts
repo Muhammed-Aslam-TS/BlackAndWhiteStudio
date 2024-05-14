@@ -45,6 +45,7 @@ import { RennovationComponent } from './components/all-projects/rennovation/renn
 import { PopupButtonForContactFormComponent } from './shared/component/popup-button-for-contact-form/popup-button-for-contact-form.component';
 import { TopScrollButtonComponent } from './shared/component/top-scroll-button/top-scroll-button.component';
 import { GetInnTouchComponent } from './components/get-inn-touch/get-inn-touch.component';
+import { FollwoUsInstagramComponent } from './components/follwo-us-instagram/follwo-us-instagram.component';
 
 
 
@@ -87,6 +88,7 @@ import { GetInnTouchComponent } from './components/get-inn-touch/get-inn-touch.c
     PopupButtonForContactFormComponent,
     TopScrollButtonComponent,
     GetInnTouchComponent,
+    FollwoUsInstagramComponent,
   ],
   imports: [
     BrowserModule,

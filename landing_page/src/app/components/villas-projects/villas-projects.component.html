@@ -1,30 +1,28 @@
-
-<app-nav-bar></app-nav-bar>
+<!-- <app-nav-bar></app-nav-bar> -->
 
 <div class="mx-auto max-w-7xl p-16">
-    <div class="text-center">
-      <h2
-        class="font-semibold lg:text-4xl text-3xl lg:leading-9 md:leading-7 leading-9 text-gray-800 md:w-full w-9/12 mx-auto">
-        {{filteredVillasImages[0].category |uppercase }}  PROJECTS </h2>
-      <p class="font-normal text-base leading-6 text-gray-600 mt-4 lg:w-5/12 md:w-9/12 mx-auto">Follow us on instagram
-        <span class="underline cursor-pointer">followuspleaseee</span> and tag us to get featured on our timeline</p>
-    </div>
-    <div class="-m-1 flex flex-wrap md:-m-2 pt-24">
-      <div *ngFor="let item of filteredVillasImages" class="flex w-1/3 flex-wrap">
-        <div class="w-full p-1 md:p-2 image-container">
-          <!-- <h1 class="text-white text-3xl">{{item.category}}</h1> -->
-          <img alt="gallery" class="block h-full w-full rounded-lg object-cover object-center" src="{{item.img[0]}}" />
-          <div class="image-text flex flex-col" >
-            <p class="text-white text-3xl mb-2">{{item.hedding}}</p>
-            <p class="text-white mb-2">click heare</p>
-            <button  (click)="gotoGallery(item._id)" class="px-3 py-1 rounded-lg bg-white text-black">Go to Work </button>
-          </div>
+  <div class="text-center">
+    <h2
+      class="font-semibold lg:text-4xl text-3xl lg:leading-9 md:leading-7 leading-9 text-gray-800 md:w-full w-9/12 mx-auto">
+      {{filteredVillasImages[0].category |uppercase }} PROJECTS </h2>
+      <app-follwo-us-instagram></app-follwo-us-instagram>
+  </div>
+  <div class="-m-1 flex flex-wrap md:-m-2 pt-24">
+    <div *ngFor="let item of filteredVillasImages" class="flex w-1/3 flex-wrap">
+      <div class="w-full p-1 md:p-2 image-container">
+        <!-- <h1 class="text-white text-3xl">{{item.category}}</h1> -->
+        <img alt="gallery" class="block h-full w-full rounded-lg object-cover object-center" src="{{item.img[0]}}" />
+        <div class="image-text flex flex-col">
+          <p class="text-white text-3xl mb-2">{{item.hedding}}</p>
+          <p class="text-white mb-2">click heare</p>
+          <button (click)="gotoGallery(item._id)" class="px-3 py-1 rounded-lg bg-white text-black">Go to Work </button>
         </div>
-      </div>    
+      </div>
     </div>
   </div>
-  
-  
-  <!-- <pagination-controls (pageChange)="p = $event"></pagination-controls> -->
+</div>
 
-  <app-footer2></app-footer2>
+
+<!-- <pagination-controls (pageChange)="p = $event"></pagination-controls> -->
+
+<!-- <app-footer2></app-footer2> -->

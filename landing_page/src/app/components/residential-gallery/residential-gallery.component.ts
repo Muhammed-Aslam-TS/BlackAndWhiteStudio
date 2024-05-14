@@ -18,7 +18,6 @@ export class ResidentialGalleryComponent implements OnInit {
 
       this.name = response.hedding
       this.images = response.img
-      console.log(this.name,'lllllllllllllllllll')
     })
   }
 

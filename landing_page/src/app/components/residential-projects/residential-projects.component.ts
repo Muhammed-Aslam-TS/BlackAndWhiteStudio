@@ -28,7 +28,7 @@ export class ResidentialProjectsComponent {
 
   gotoGallery(id:string) {
     localStorage.setItem('imageId',id)
-    this.router.navigate(['villaslGallery'])
+    this.router.navigate(['residentialGallery'])
   }
 
 
