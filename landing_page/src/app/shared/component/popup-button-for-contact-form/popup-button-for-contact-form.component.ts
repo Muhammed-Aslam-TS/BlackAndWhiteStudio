@@ -11,6 +11,9 @@ export class PopupButtonForContactFormComponent {
   toggleModal() {
     this.showModal = !this.showModal;
   }
+  toggleCloseModal() {
+    this.showModal = false;
+  }
 
   @HostListener('window:scroll', ['$event'])
   scrollCheack() {

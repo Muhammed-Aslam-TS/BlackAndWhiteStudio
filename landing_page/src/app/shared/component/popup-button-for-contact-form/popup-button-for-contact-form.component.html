@@ -7,7 +7,7 @@
 </button>
 </div>
 <div *ngIf="showModal" class="fixed inset-0 flex justify-center items-center z-50 bg-black bg-opacity-50 backdrop-filter backdrop-blur-md">
-    <div class="relative w-auto my-6 mx-96 max-w-3xl rounded-lg p-8">
+    <div class="relative w-full my-6  rounded-lg p-8">
         <!--content-->
         <div
             class="border-0 rounded-xl backdrop-blur-sm shadow-lg relative flex flex-col bg-blend-lighten bg-white h-1/6 outline-none focus:outline-none">
@@ -17,14 +17,14 @@
                     Contact form </h3>
                 <button
                     class="p-1 ml-auto bg-transparent border-0 text-red-600  float-right text-3xl leading-none font-semibold outline-none focus:outline-none"
-                    (click)="toggleModal()">
-                    <span class="bg-transparent text-red-600  h-6 w-6 text-2xl block outline-none focus:outline-none">
+                    (click)="toggleCloseModal()">
+                    <button class="bg-transparent text-red-600  h-6 w-6 text-2xl block outline-none focus:outline-none">
                         <i class="fa-solid fa-xmark"></i>
-                    </span>
+                    </button>
                 </button>
             </div>
             <!--body-->
-            <div class="px-10 flex-auto flex justify-between gap-8">
+            <!-- <div class="px-10 flex-auto flex justify-between gap-8">
 
                 <p class="my-4 text-blueGray-500 text-lg leading-relaxed">
                     I always felt like I could do anything. That’s the main
@@ -33,15 +33,26 @@
                     themselves. If you're taught you can’t do anything, you
                     won’t do anything. I was taught I could do everything.
                 </p>
-            </div>
+            </div> -->
 
-            <div class="relative px-5 py-2 flex-auto flex justify-between gap-8">
+            <div class="relative px-5 py-2 flex-auto flex justify-between gap-2">
 
                 <!-- <app-contact-form></app-contact-form> -->
-                <div class=" flex justify-center items-center">
-                    <img class="h-80 w-96"
-                        src="https://png.pngtree.com/png-vector/20210120/ourmid/pngtree-contact-us-flat-design-style-png-image_2766546.jpg"
+                <div class="w-full flex justify-center items-center">
+                    <!-- <div class=""> -->
+                        <img class=""
+                        src="https://cdni.iconscout.com/illustration/premium/thumb/sign-up-6333618-5230178.png?f=webp"
                         alt="" srcset="">
+                        
+                    <!-- </div> -->
+                    
+                        <!-- <p class="my-4 text-blueGray-500 text-lg leading-relaxed">
+                            I always felt like I could do anything. That’s the main
+                            thing people are controlled by! Thoughts- their perception
+                            of themselves! They're slowed down by their perception of
+                            themselves. If you're taught you can’t do anything, you
+                            won’t do anything. I was taught I could do everything.
+                        </p> -->
                 </div>
                 <div class="flex justify-center ">
                     <div class="h-auto w-96">
@@ -57,6 +68,11 @@
                                 <input type="text" id="fullname"
                                     class="bg-gray-100 outline-none text-gray-900 text-sm rounded-2xl block w-full p-2.5  py-5"
                                     placeholder="Full Name" required />
+                            </div>
+                            <div class="mb-6">
+                                <input type="number" id="tel"
+                                    class="bg-gray-100 outline-none text-gray-900 text-sm rounded-2xl block w-full p-2.5  py-5"
+                                    placeholder="Mobile" required />
                             </div>
                             <div class="mb-6">
                                 <input type="email" id="email"
